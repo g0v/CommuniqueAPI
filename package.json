@@ -1,0 +1,13 @@
+{
+    "name": "CommuniqueAPI",
+    "version": "0.0.1",
+    "engines":{
+        "node": "0.10.x"
+    },
+    "description": "The g0v Communique API",
+    "dependencies": {
+        "express": "3.4.x",
+        "hackpad": "0.0.3"
+    },
+    "license": "MIT"
+}
