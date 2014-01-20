@@ -7,7 +7,8 @@
     "description": "The g0v Communique API",
     "dependencies": {
         "express": "3.4.x",
-        "hackpad": "0.0.3"
+        "hackpad": "0.0.3",
+        "htmlparser2": "3.4.x"
     },
     "license": "MIT"
 }
