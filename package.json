@@ -1,14 +1,16 @@
 {
     "name": "CommuniqueAPI",
+    "description": "The g0v Communique API",
     "version": "0.0.1",
+    "author": "Lee",
     "engines":{
         "node": "0.10.x"
     },
-    "description": "The g0v Communique API",
     "dependencies": {
         "express": "3.4.x",
         "hackpad": "0.0.3",
         "htmlparser2": "3.4.x"
     },
+    "repository": "git://github.com/jessy1092/CommuniqueAPI",
     "license": "MIT"
 }
