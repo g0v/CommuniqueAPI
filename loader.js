@@ -15,32 +15,58 @@ var hackpadClient = new Hackpad(config.hackpad.client, config.hackpad.secret, co
 // });
 
 // var parser = new htmlparser.Parser(handler);
-var tag = 0;
-var date;
+var dateTag    = 0;
+var urlTag     = 0;
+var contentTag = 0;
+
+var url  = {'name': '', 'url': ''};
+var urls = [];
+var item = {'date': '', 'content': '', 'urls': urls};
+var date = '';
 var parser = new htmlparser.Parser({
     onopentag: function (name, attribs) {
         // console.log("opentag " + name);
         switch (name)
         {
             case 'p':
-                tag == 0? tag++:tag;
+                dateTag == 0 ? dateTag++:dateTag;
                 break;
             case 'b':
-                tag == 1? tag++:tag;
+                dateTag == 1 ? dateTag++:dateTag;
                 break;
             case 'a':
-                console.log(attribs);
+                urlTag++;
+                url['url'] = attribs['href'];
+                console.log(url['url']);
+                break;
+            case 'ul':
+                contentTag == 0 ? contentTag++:contentTag;
+                break;
+            case 'li':
+                contentTag == 1 ? contentTag++:contentTag;
+                break;
             default:
                 break;
         }
-        console.log("opentag " + name + tag);
+        console.log("opentag " + name + dateTag);
     },
     ontext: function (text) {
         console.log("text " + text);
-        if (tag == 2 && text.match(/\d{2}\/\d{2}/))
+        if (dateTag == 2 && text.match(/\d{2}\/\d{2}/))
         {
-            console.log("match", text);
+            console.log("match date", text);
             date = text;
+        }
+        else if (contentTag > 0 && date != '') 
+        {
+            item['content'] += text;
+            console.log(item['content']);
+            if(urlTag > 0)
+            {
+                url['name'] = text;
+                urls.push(url);
+                console.log(urls[0].name);
+            }
         }
     },
     onclosetag: function (tagname) {
@@ -48,15 +74,26 @@ var parser = new htmlparser.Parser({
         switch (tagname)
         {
             case 'p':
-                tag == 1? tag--:tag;
+                dateTag == 1 ? dateTag--:dateTag;
                 break;
             case 'b':
-                tag == 2? tag--:tag;
+                dateTag == 2 ? dateTag--:dateTag;
+                break;
+            case 'a':
+                urlTag--;
+                break;
+            case 'ul':
+                contentTag == 1 ? contentTag--:contentTag;
+                break;
+            case 'li':
+                contentTag == 2 ? contentTag--:contentTag;
+                item['date'] = date;
+
                 break;
             default:
                 break;
         }
-        console.log("closetag " + tagname+tag);
+        console.log("closetag " + tagname+dateTag);
     }
 });
 
