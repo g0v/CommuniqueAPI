@@ -4,7 +4,12 @@ module.exports = {
         "client": "DpYBTaHcYcQ",
         "secret": "rXBhGzSqRJWR75zqCX5CgXaTak6ne3sj"
     },
-    padID: [
-        "QOEEpGYNXFw"
+    pads: [
+        {
+            Year: "2014",
+            IdList: [
+                "QOEEpGYNXFw"
+            ]
+        }
     ]
 }

@@ -10,12 +10,17 @@ Generate `config.js` like `config_test.js`
 ```config.js
 module.exports = {
     hackpad: {
-        "site": "Your hackpad's site",
-        "client": "You can find it on your account page in your site",
-        "secret": "You can find it on your account page in your site"
+        site: "Your hackpad's site",
+        client: "You can find it on your account page in your site",
+        secret: "You can find it on your account page in your site"
     },
-    padID: [
-        "Communique's padID"
+    pads: [
+        {
+            Year: "Year of the pads",
+            IdList: [
+                "Your pad's ID list."
+            ]
+        }
     ]
 }
 ```
