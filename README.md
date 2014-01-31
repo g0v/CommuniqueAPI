@@ -3,6 +3,26 @@ CommuniqueAPI
 
 G0V Communique API. Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
 
+## Config
+
+Generate `config.js` like `config_test.js`
+
+```config.js
+module.exports = {
+    hackpad: {
+        "site": "Your hackpad's site",
+        "client": "You can find it on your account page in your site",
+        "secret": "You can find it on your account page in your site"
+    },
+    padID: [
+        "Communique's padID"
+    ]
+}
+```
+
+## Installation
+
+`npm i`
 
 ## License
 

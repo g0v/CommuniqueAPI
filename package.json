@@ -1,16 +1,30 @@
 {
-    "name": "CommuniqueAPI",
+    "name"       : "CommuniqueAPI",
     "description": "The g0v Communique API",
-    "version": "0.0.1",
-    "author": "Lee",
+    "version"    : "0.0.1",
+    "contributor": [
+        {
+            "name" : "Lee",
+            "email": "jessy1092@gmail.com"
+        }
+    ],
+    "bugs": {
+        "mail": "jessy1092@gmail.com",
+        "web" : "https://github.com/jessy1092/CommuniqueAPI/issues"
+    },
     "engines":{
         "node": "0.10.x"
     },
     "dependencies": {
-        "express": "3.4.x",
-        "hackpad": "0.0.3",
+        "express"    : "3.4.x",
+        "hackpad"    : "0.0.3",
         "htmlparser2": "3.4.x"
     },
-    "repository": "git://github.com/jessy1092/CommuniqueAPI",
+    "repository": [
+        {
+            "type": "git",
+            "url" : "git://github.com/jessy1092/CommuniqueAPI"
+        }
+    ],
     "license": "MIT"
 }
