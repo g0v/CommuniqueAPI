@@ -1,7 +1,41 @@
 CommuniqueAPI
 =============
 
-G0V Communique API. Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
+[G0V Communique API](http://g0v-communique-api.herokuapp.com/api/1.0/entry/all). Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
+
+## Usage
+
+- GET all data of the tag
+    + /api/1.0/entry/${tag}
+- GET tag's data by date (YY or YY-MM or YY-MM-DD)
+    + /api/1.0/entry/{$tag}?start=YY-MM
+    + /api/1.0/entry/${tag}?start=YY-MM&end=YY-MM
+
+## Entry List
+
+all, g0v冷知識, irc, 萌典, 政誌, 動民主, 服貿協議, 基礎建設, 專案中心, g0v新手村, 鄉民關心你, 新聞小幫手, g0v文化部, 立法院專案, 公務人員考察網, hackathon, 爬資料, 對外宣傳和媒體報導, 待整理, 福利請聽, iHelp, g0v授權中心, 環境儀表板, leve1up 
+
+## Data format
+
+```data.json
+[
+    {
+    date: "2014/02/05",
+    padID: "6hGHxaQ0yjb",
+    tags: [
+        "對外宣傳和媒體報導"
+    ],
+    content: "g0v 社群與英國推動數位民主的非營利組織 mySociety 及智利 Ciudadano Inteligente 基金會進行 irc 聊天室群談（紀錄），介紹彼此專案與合作可能，共二十餘人參與。 ",
+    urls: [
+        {
+        name: "mySociety",
+        url: "http://www.mysociety.org/"
+        }
+    ],
+    _id: "52f3be549d718d0200000026"
+    },
+]
+```
 
 ## Config
 
