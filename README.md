@@ -11,7 +11,7 @@ CommuniqueAPI
     + /api/1.0/entry/{$tag}?start=YY-MM
     + /api/1.0/entry/${tag}?start=YY-MM&end=YY-MM
 
-## Entry List
+## Tag List
 
 all, g0v冷知識, irc, 萌典, 政誌, 動民主, 服貿協議, 基礎建設, 專案中心, g0v新手村, 鄉民關心你, 新聞小幫手, g0v文化部, 立法院專案, 公務人員考察網, hackathon, 爬資料, 對外宣傳和媒體報導, 待整理, 福利請聽, iHelp, g0v授權中心, 環境儀表板, leve1up 
 
