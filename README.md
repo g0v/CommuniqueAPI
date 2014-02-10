@@ -7,9 +7,9 @@ CommuniqueAPI
 
 - GET all data of the tag
     + /api/1.0/entry/${tag}
-- GET tag's data by date (YY or YY/MM or YY/MM/DD)
-    + /api/1.0/entry/{$tag}?start=YY/MM
-    + /api/1.0/entry/${tag}?start=YY/MM&end=YY/MM
+- GET tag's data by date (YY or YY-MM or YY-MM-DD)
+    + /api/1.0/entry/{$tag}?start=YY-MM
+    + /api/1.0/entry/${tag}?start=YY-MM&end=YY-MM
 
 ## Tag List
 
@@ -20,26 +20,26 @@ all, g0v冷知識, irc, 萌典, 政誌, 動民主, 服貿協議, 基礎建設, �
 ```data.json
 [
     {
-    date: "2014/02/05",
-    padID: "6hGHxaQ0yjb",
-    tags: [
-        "對外宣傳和媒體報導"
-    ],
-    content: "g0v 社群與英國推動數位民主的非營利組織 mySociety 及智利 Ciudadano Inteligente 基金會進行 irc 聊天室群談（紀錄），介紹彼此專案與合作可能，共二十餘人參與。 ",
-    urls: [
-        {
-            name: "mySociety",
-            url: "http://www.mysociety.org/"
-        }
-    ],
+        date: "2014/02/05",
+        padID: "6hGHxaQ0yjb",
+        tags: [
+            "對外宣傳和媒體報導"
+        ],
+        content: "g0v 社群與英國推動數位民主的非營利組織 mySociety 及智利 Ciudadano Inteligente 基金會進行 irc 聊天室群談（紀錄），介紹彼此專案與合作可能，共二十餘人參與。 ",
+        urls: [
+            {
+                name: "mySociety",
+                url: "http://www.mysociety.org/"
+            }
+        ],
         _id: "52f3be549d718d0200000026"
-    },
+    }
 ]
 ```
 
 ## Config
 
-Generate `config.js` like `config_test.js`
+Generate `config.js`.
 
 ```config.js
 module.exports = {
