@@ -42,6 +42,12 @@ app.get('/api/' + v + '/entry/:tag', function (req, res) {
     });
 });
 
+app.get('/api/' + v + '/tags', function (req, res) {
+    dbClient.queryTags(function (result) {
+        res.send(result);
+    });
+});
+
 var port = Number(process.env.PORT || 5000);
 app.listen(port);
 
