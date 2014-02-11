@@ -10,10 +10,46 @@ CommuniqueAPI
 - GET tag's data by date (YY or YY-MM or YY-MM-DD)
     + /api/1.0/entry/{$tag}?start=YY-MM
     + /api/1.0/entry/${tag}?start=YY-MM&end=YY-MM
+- GET List of tags
+    + /api/1.0/tags
 
 ## Tag List
 
-all, g0v冷知識, irc, 萌典, 政誌, 動民主, 服貿協議, 基礎建設, 專案中心, g0v新手村, 鄉民關心你, 新聞小幫手, g0v文化部, 立法院專案, 公務人員考察網, hackathon, 爬資料, 對外宣傳和媒體報導, 待整理, 福利請聽, iHelp, g0v授權中心, 環境儀表板, leve1up 
+You can get from [API](http://g0v-communique-api.herokuapp.com/api/1.0/tags).
+
+"All" is also one of tags and is used to get all data.
+
+```tags.json
+[
+    "g0v外交",
+    "專案中心",
+    "動民主",
+    "對外宣傳和媒體報導 ",
+    "hackathon",
+    "基礎建設",
+    "立法院專案",
+    "對外宣傳和媒體報導",
+    "萌典",
+    "g0v文化部",
+    "leve1up",
+    "g0v專案中心",
+    "環境儀表板",
+    "爬資料",
+    "g0v冷知識",
+    "動民主 ",
+    "政誌",
+    "公務人員考察網",
+    "服貿協議",
+    "irc",
+    "iHelp",
+    "對外宣傳",
+    "立法院專案 ",
+    "待整理",
+    "鄉民關心你",
+    "福利請聽",
+    "新聞小幫手"
+]
+```
 
 ## Data format
 
