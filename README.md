@@ -26,6 +26,7 @@ all, g0v冷知識, irc, 萌典, 政誌, 動民主, 服貿協議, 基礎建設, �
             "對外宣傳和媒體報導"
         ],
         content: "g0v 社群與英國推動數位民主的非營利組織 mySociety 及智利 Ciudadano Inteligente 基金會進行 irc 聊天室群談（紀錄），介紹彼此專案與合作可能，共二十餘人參與。 ",
+        comment: [],
         urls: [
             {
                 name: "mySociety",
