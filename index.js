@@ -1,20 +1,24 @@
 var express = require('express');
 
 var loader = require('./lib/loader'),
-    dbClient = require('./lib/db');
+    dbClient = require('./lib/db'),
+    tagLoader = require('./lib/tagloader');
 
 var app = express();
 
 var v = '1.0';
 var period = 1000 * 60 * 60;  // 1hr
 
-loader.init();
-loader.run();
+tagLoader.init();
+tagLoader.run();
 
-setInterval(function () {
-    loader.init();
-    loader.run();
-}, period);
+// loader.init();
+// loader.run();
+
+// setInterval(function () {
+//     loader.init();
+//     loader.run();
+// }, period);
 
 app.get('/api/' + v + '/entry/:tag', function (req, res) {
     console.log(req.params.tag);
