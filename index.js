@@ -9,8 +9,8 @@ var app = express();
 var v = '1.0';
 var period = 1000 * 60 * 60;  // 1hr
 
-// tagloader.init();
-// tagloader.run();
+tagloader.init();
+tagloader.run();
 
 loader.init();
 loader.run();
