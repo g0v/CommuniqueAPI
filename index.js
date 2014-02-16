@@ -1,9 +1,8 @@
 var express = require('express');
 
-var loader = require('./lib/loader'),
-    dbClient = require('./lib/db'),
-    tagLoader = require('./lib/tagloader');
-
+var loader    = require('./lib/loader');
+var tagloader = require('./lib/tagloader');
+var dbClient  = require('./lib/db');
 var app = express();
 
 var v = '1.0';
