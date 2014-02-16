@@ -8,16 +8,16 @@ var app = express();
 var v = '1.0';
 var period = 1000 * 60 * 60;  // 1hr
 
-tagLoader.init();
-tagLoader.run();
+tagloader.init();
+tagloader.run();
 
-// loader.init();
-// loader.run();
+loader.init();
+loader.run();
 
-// setInterval(function () {
-//     loader.init();
-//     loader.run();
-// }, period);
+setInterval(function () {
+    loader.init();
+    loader.run();
+}, period);
 
 app.get('/api/' + v + '/entry/:tag', function (req, res) {
     console.log(req.params.tag);
