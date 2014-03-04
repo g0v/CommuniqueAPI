@@ -19,6 +19,10 @@ setInterval(function () {
     loader.run();
 }, period);
 
+app.all('/*', function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+});
+
 app.get('/api/' + v + '/entry/:tag', function (req, res) {
     console.log(req.params.tag);
     var filter = {};

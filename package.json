@@ -12,6 +12,9 @@
         "mail": "jessy1092@gmail.com",
         "url" : "https://github.com/jessy1092/CommuniqueAPI/issues"
     },
+    "scripts": {
+        "start": "node index.js"
+    },
     "engines":{
         "node": "0.10.x"
     },
