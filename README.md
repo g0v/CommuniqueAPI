@@ -12,6 +12,8 @@ CommuniqueAPI
     + /api/1.0/entry/${tag}?start=YY-MM&end=YY-MM
 - GET List of tags
     + /api/1.0/tags
+- GET data by limit = x
+    + /api/1.0/entry/${tag}?limit=x
 
 ## Tag List
 

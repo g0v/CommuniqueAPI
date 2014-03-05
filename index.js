@@ -27,6 +27,7 @@ app.all('/*', function (req, res, next) {
 
 app.get('/api/' + v + '/entry/:tag', function (req, res) {
     console.log(req.params.tag);
+    var option = {'sort':[['date','desc']]};
     var filter = {};
     if(req.params.tag != 'all')
     {
@@ -44,8 +45,12 @@ app.get('/api/' + v + '/entry/:tag', function (req, res) {
         date['$lte'] = req.query.end;
         filter['date'] = date;
     }
+    if (typeof(req.query.limit) != 'undefined')
+    {
+        option['limit'] = req.query.limit;
+    }
 
-    dbClient.queryData(filter, function (result) {
+    dbClient.queryData(filter, option, function (result) {
         res.send(result);
         // console.log(result);
     });
