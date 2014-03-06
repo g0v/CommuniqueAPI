@@ -83,17 +83,17 @@ module.exports = {
         site: "Your hackpad's site",
         client: "You can find it on your account page in your site",
         secret: "You can find it on your account page in your site"
-    },
-    pads: [
-        {
-            Year: "Year of the pads",
-            IdList: [
-                "Your pad's ID list."
-            ]
-        }
-    ]
+    }
 }
 ```
+
+## Change Log
+
+### 2014/03/07 v0.1.2
+- It parses the communique form [http://g0v.hackpad.com](http://g0v.hackpad.com) automatically.It didn't config pad's ID anymore.
+
+### 2014/03/06 v0.1.1
+- It can get entry by limit length. Like /api/1.0/entry/${tag}?limit=x
 
 ## Installation
 
