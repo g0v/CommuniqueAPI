@@ -89,6 +89,9 @@ module.exports = {
 
 ## Change Log
 
+### 2014/03/09 v0.1.3
+- Change the update time.
+
 ### 2014/03/07 v0.1.2
 - It parses the communique form [http://g0v.hackpad.com](http://g0v.hackpad.com) automatically.It didn't config pad's ID anymore.
 
@@ -98,6 +101,8 @@ module.exports = {
 ## Installation
 
 `npm i`
+
+`npm start`
 
 ## License
 
