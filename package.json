@@ -27,7 +27,7 @@
     "repository": [
         {
             "type": "git",
-            "url" : "git://github.com/jessy1092/CommuniqueAPI"
+            "url" : "https://github.com/jessy1092/CommuniqueAPI"
         }
     ],
     "license": "MIT"
