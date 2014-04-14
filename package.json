@@ -1,7 +1,7 @@
 {
     "name"       : "CommuniqueAPI",
     "description": "The g0v Communique API",
-    "version"    : "0.1.3",
+    "version"    : "0.2.0",
     "contributor": [
         {
             "name" : "Lee",

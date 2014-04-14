@@ -57,8 +57,8 @@ app.get('/api/' + v + '/entry/:tag', function (req, res) {
     });
 });
 
-app.get('/api/' + v + '/tags', function (req, res) {
-    dbClient.queryTags(function (result) {
+app.get('/api/' + v + '/tags/:id', function (req, res) {
+    dbClient.queryTags(req.params.id, function (result) {
         res.send(result);
     });
 });
