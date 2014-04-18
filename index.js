@@ -6,7 +6,8 @@ var dbClient  = require('./lib/db');
 var app = express();
 
 var v = '1.0';
-var period = 1000 * 60 * 60;  // 1hr
+var period    = 1000 * 60 * 60;  // 1hr
+var tagPeriod = 1000 * 60 * 5;
 
 tagloader.init();
 tagloader.run();
@@ -16,9 +17,11 @@ loader.run();
 
 setInterval(function () {
     loader.run();
-    tagloader.run();
-
 }, period);
+
+setInterval(function () {
+    tagloader.run();
+}, tagPeriod);
 
 app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
