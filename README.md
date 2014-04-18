@@ -10,43 +10,31 @@ CommuniqueAPI
 - GET tag's data by date (YY or YY-MM or YY-MM-DD)
     + /api/1.0/entry/{$tag}?start=YY-MM
     + /api/1.0/entry/${tag}?start=YY-MM&end=YY-MM
-- GET List of tags
-    + /api/1.0/tags
 - GET data by limit = x
     + /api/1.0/entry/${tag}?limit=x
+- GET list of tags
+    + /api/1.0/tags/all
+- GET specific tag's content
+    + /api/1.0/tags/${tag}
 
-## Tag List
+## Tag format
 
-You can get from [API](http://g0v-communique-api.herokuapp.com/api/1.0/tags).
+You can get from [API](http://g0v-communique-api.herokuapp.com/api/1.0/tags/all).
 
 "All" is also one of tags and is used to get all data.
 
 ```tags.json
 [
-    "動民主",
-    "g0v外交",
-    "專案中心",
-    "對外宣傳和媒體報導",
-    "hackathon",
-    "基礎建設",
-    "立法院專案",
-    "leve1up",
-    "g0v文化部",
-    "萌典",
-    "g0v專案中心",
-    "環境儀表板",
-    "爬資料",
-    "g0v冷知識",
-    "政誌",
-    "irc",
-    "服貿協議",
-    "iHelp",
-    "待整理",
-    "對外宣傳",
-    "鄉民關心你",
-    "福利請聽",
-    "新聞小幫手",
-    "公務人員考察網"
+    {
+        name: "對外宣傳和媒體報導",
+        description: "與 g0v 相關的宣傳以及媒體報導。 g0v對外產生的資訊由新聞中心發佈。",
+        urls: [
+            {
+                name: "新聞中心",
+                url: "http://hack.g0v.tw/g0vMOC/w01v8lrMLTY"
+            }
+        ]
+    },
 ]
 ```
 
@@ -88,6 +76,9 @@ module.exports = {
 ```
 
 ## Change Log
+
+### 2014/04/15 v0.2.0
+- Modify get the list of tags API.
 
 ### 2014/03/09 v0.1.3
 - Change the update time.
