@@ -15,11 +15,11 @@ tagloader.run();
 loader.init();
 loader.run();
 
-setInterval(function () {
+var entryInterval = setInterval(function () {
     loader.run();
 }, period);
 
-setInterval(function () {
+var tagInterval = setInterval(function () {
     tagloader.run();
 }, tagPeriod);
 
