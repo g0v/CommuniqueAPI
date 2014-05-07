@@ -82,7 +82,11 @@ app.get('/api/' + v2 + '/hackpadHistory', function (req, res) {
 
 app.get('/api/' + v2 + '/hackpadList', function (req, res) {
     res.send(historyloader.getHackpadList());
-})
+});
+
+app.get('/api/' + v2 + '/hackpadAuthors', function (req, res) {
+    res.send(historyloader.getHackpadAuthors());
+});
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port);
