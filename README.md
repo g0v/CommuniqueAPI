@@ -17,12 +17,19 @@ CommuniqueAPI
 - GET specific tag's content
     + /api/1.0/tags/${tag}
 
-## Tag format
 
-You can get from [API](http://g0v-communique-api.herokuapp.com/api/1.0/tags/all).
+- Get hackpad's Data
+    + /api/2.0/hackpadData
+- Get hackpad's History
+    + /api/2.0/hackpadHistory
+- Get all hackpad List
+    + /api/2.0/hackpadList
+- Get all hackpad's authors
+    + /api/2.0/hackpadAuthors
 
-"All" is also one of tags and is used to get all data.
+## Data format
 
+### Tags
 ```tags.json
 [
     {
@@ -38,8 +45,7 @@ You can get from [API](http://g0v-communique-api.herokuapp.com/api/1.0/tags/all)
 ]
 ```
 
-## Data format
-
+### Entry
 ```data.json
 [
     {
@@ -61,6 +67,55 @@ You can get from [API](http://g0v-communique-api.herokuapp.com/api/1.0/tags/all)
 ]
 ```
 
+### hackpadData
+```
+[
+    {
+        date: "20140508",
+        num: 4
+    }
+]
+```
+
+### hackpadHistory
+```
+[
+    {
+        padID: "NxMrvI4uYcP",
+        history: [ ],
+        editNum: 618,
+        createTimeStamp: 1399540293.516,
+        authors: [
+            "Nicemaker",
+            "venev",
+            "Moon Chang"
+        ],
+        authorsNum: 3
+    }
+]
+```
+
+### hackpadList
+```
+[
+    "O1D4BePJzej"
+]
+```
+
+### hackpadAuthors
+```
+[
+    {
+        name: "Nicemaker",
+        editNum: 5,
+        pads: [
+            "NxMrvI4uYcP",
+            "926nwUKC90j"
+        ]
+    }
+]
+```
+
 ## Config
 
 Generate `config.js`.
@@ -76,6 +131,17 @@ module.exports = {
 ```
 
 ## Change Log
+
+### 2014/05/08 v0.3.1
+- Add new api for g0vTxT
+    + api/2.0/hackpadAuthors
+- Modify hackpadHistory format
+
+### 2014/05/06 v0.3.0
+- Add new api for g0vTxT
+    + api/2.0/hackpadData
+    + api/2.0/hackpadHistory
+    + api/2.0/hackpadList
 
 ### 2014/04/15 v0.2.0
 - Modify get the list of tags API.
