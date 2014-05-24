@@ -81,7 +81,8 @@ app.get('/api/' + v2 + '/hackpadHistory', function (req, res) {
 });
 
 app.get('/api/' + v2 + '/hackpadList', function (req, res) {
-    res.send(historyloader.getHackpadList());
+    // res.send(historyloader.getHackpadList());
+    res.send(loader.getHackpadListTmp());
 });
 
 app.get('/api/' + v2 + '/hackpadAuthors', function (req, res) {
