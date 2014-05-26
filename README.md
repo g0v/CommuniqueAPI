@@ -5,6 +5,8 @@ CommuniqueAPI
 
 ## Usage
 
+### API 1.0 for g0v.tw
+
 - GET all data of the tag
     + /api/1.0/entry/${tag}
 - GET tag's data by date (YY or YY-MM or YY-MM-DD)
@@ -17,6 +19,7 @@ CommuniqueAPI
 - GET specific tag's content
     + /api/1.0/tags/${tag}
 
+### API 2.0 for g0vTxT
 
 - Get hackpad's Data
     + /api/2.0/hackpadData
@@ -132,6 +135,11 @@ module.exports = {
 
 ## Change Log
 
+### 2014/05/26 v0.3.2
+- fix the bug: cannot load the pad which its history is empty.
+- Update README
+    + Add preinstallation
+
 ### 2014/05/08 v0.3.1
 - Add new api for g0vTxT
     + api/2.0/hackpadAuthors
@@ -154,6 +162,11 @@ module.exports = {
 
 ### 2014/03/06 v0.1.1
 - It can get entry by limit length. Like /api/1.0/entry/${tag}?limit=x
+
+## Preinstallation
+
+- Install [mongoDB](http://www.mongodb.org/)
+- Install [Node.js](http://nodejs.org/)
 
 ## Installation
 
