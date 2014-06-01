@@ -17,7 +17,7 @@ dbClient.init();
 tagloader.init(dbClient);
 tagloader.run();
 
-loader.init();
+loader.init(dbClient);
 loader.run();
 
 historyloader.init();
