@@ -118,8 +118,9 @@ CommuniqueAPI
     }
 ]
 ```
+## Preinstallation
 
-## Config
+### Config
 
 Generate `config.js`.
 
@@ -133,7 +134,25 @@ module.exports = {
 }
 ```
 
+### Environment
+
+- Install [mongoDB](http://www.mongodb.org/)
+- Install [Node.js](http://nodejs.org/)
+
+## Installation
+
+Install module `npm i`
+
+Open mongoDB `mongdb`
+
+Start server `npm start`
+
+And then open `localhost:5000/api/1.0/entry/all` to get the communiques.
+
 ## Change Log
+
+### 2014/06/01 v0.4.0
+- Refactor the loader and parser structure.
 
 ### 2014/05/26 v0.3.2
 - fix the bug: cannot load the pad which its history is empty.
@@ -163,16 +182,6 @@ module.exports = {
 ### 2014/03/06 v0.1.1
 - It can get entry by limit length. Like /api/1.0/entry/${tag}?limit=x
 
-## Preinstallation
-
-- Install [mongoDB](http://www.mongodb.org/)
-- Install [Node.js](http://nodejs.org/)
-
-## Installation
-
-`npm i`
-
-`npm start`
 
 ## License
 
