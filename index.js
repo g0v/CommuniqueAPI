@@ -2,7 +2,6 @@ var express = require('express');
 
 var loader    = require('./lib/loader');
 var dbClient  = require('./lib/db');
-var historyloader = require('./lib/historyloader');
 
 var app = express();
 
@@ -12,12 +11,7 @@ var period    = 1000 * 60 * 60;  // 1hr
 var tagPeriod = 1000 * 60 * 60;
 
 dbClient.init();
-
 loader.init(dbClient);
-loader.run();
-
-// historyloader.init();
-// historyloader.run();
 
 var entryInterval = setInterval(function () {
     loader.run();
@@ -67,19 +61,19 @@ app.get('/api/' + v + '/tags/:id', function (req, res) {
 });
 
 app.get('/api/' + v2 + '/hackpadData', function (req, res) {
-    res.send(historyloader.getHackpadData());
+    res.send(dbClient.getHackpadData());
 });
 
 app.get('/api/' + v2 + '/hackpadHistory', function (req, res) {
-    res.send(historyloader.getHackpadHistory());
+    res.send(dbClient.getHackpadHistory());
 });
 
 app.get('/api/' + v2 + '/hackpadList', function (req, res) {
-    res.send(historyloader.getHackpadList());
+    res.send(dbClient.getHackpadList());
 });
 
 app.get('/api/' + v2 + '/hackpadAuthors', function (req, res) {
-    res.send(historyloader.getHackpadAuthors());
+    res.send(dbClient.getHackpadAuthors());
 });
 
 var port = Number(process.env.PORT || 5000);
