@@ -1,7 +1,6 @@
 var express = require('express');
 
 var loader    = require('./lib/loader');
-var tagloader = require('./lib/tagloader');
 var dbClient  = require('./lib/db');
 var historyloader = require('./lib/historyloader');
 
@@ -14,22 +13,15 @@ var tagPeriod = 1000 * 60 * 60;
 
 dbClient.init();
 
-tagloader.init(dbClient);
-tagloader.run();
-
 loader.init(dbClient);
 loader.run();
 
-historyloader.init();
-historyloader.run();
+// historyloader.init();
+// historyloader.run();
 
 var entryInterval = setInterval(function () {
     loader.run();
 }, period);
-
-var tagInterval = setInterval(function () {
-    tagloader.run();
-}, tagPeriod);
 
 app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
