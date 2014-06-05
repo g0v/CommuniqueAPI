@@ -141,15 +141,16 @@ module.exports = {
 
 ## Installation
 
-Install module `npm i`
-
-Open mongoDB `mongdb`
-
-Start server `npm start`
+- Install module: `npm i`
+- Open mongoDB:   `mongob`
+- Start server:   `npm start`
 
 And then open `localhost:5000/api/1.0/entry/all` to get the communiques.
 
 ## Change Log
+
+### 2014/06/04 v0.4.1
+- fix url bug.
 
 ### 2014/06/01 v0.4.0
 - Refactor the loader and parser structure.
