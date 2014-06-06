@@ -101,7 +101,10 @@ CommuniqueAPI
 ### hackpadList
 ```
 [
-    "O1D4BePJzej"
+    {
+        title: "有關於發送活動",
+        padID: "O1D4BePJzej"
+    }
 ]
 ```
 
@@ -149,6 +152,10 @@ And then open `localhost:5000/api/1.0/entry/all` to get the communiques.
 
 ## Change Log
 
+### 2014/06/07 v.5.0
+- Modify Hackpad List structure
+- Auto update the hackpad history, data, list and authors.
+
 ### 2014/06/04 v0.4.1
 - fix url bug.
 
@@ -182,7 +189,6 @@ And then open `localhost:5000/api/1.0/entry/all` to get the communiques.
 
 ### 2014/03/06 v0.1.1
 - It can get entry by limit length. Like /api/1.0/entry/${tag}?limit=x
-
 
 ## License
 
