@@ -1,5 +1,6 @@
 CommuniqueAPI
 =============
+[![Build Status](https://travis-ci.org/jessy1092/CommuniqueAPI.svg?branch=master)](https://travis-ci.org/jessy1092/CommuniqueAPI)
 
 [G0V Communique API](http://g0v-communique-api.herokuapp.com/api/1.0/entry/all). Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
 
@@ -151,6 +152,9 @@ module.exports = {
 And then open `localhost:5000/api/1.0/entry/all` to get the communiques.
 
 ## Change Log
+
+### 2014/06/08 v0.5.1
+- Add test
 
 ### 2014/06/07 v.5.0
 - Modify Hackpad List structure
