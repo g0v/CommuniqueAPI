@@ -8,7 +8,6 @@ var app = express();
 var v = '1.0';
 var v2 = '2.0';
 var period    = 1000 * 60 * 60;  // 1hr
-var tagPeriod = 1000 * 60 * 60;
 
 dbClient.init();
 loader.init(dbClient);
