@@ -22,7 +22,7 @@ describe('history Parser', function () {
         });
 
         historyParser.on('insertHackpadHistory', function (padHistory) {
-            padHistory.should.have.keys(['padID', 'history', 'editNum', 'authors', 'authorsNum', 'createTimeStamp']);
+            padHistory.should.have.keys(['padID', 'history', 'editNum', 'historyNum', 'authors', 'authorsNum', 'createTimeStamp']);
             padHistory.padID.should.be.equal('i8tMqWAFi39');
         });
 
@@ -35,7 +35,7 @@ describe('history Parser', function () {
             author.pads.should.containEql('i8tMqWAFi39');
         });
 
-        historyParser.on('endOfParser', function () {
+        historyParser.on('endOfParser', function (hackpadEditNum) {
             done();
         });
     });
