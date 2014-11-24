@@ -1,6 +1,6 @@
 CommuniqueAPI
 =============
-[![Build Status](https://travis-ci.org/g0v/CommuniqueAPI.svg?branch=master)](https://travis-ci.org/g0v/CommuniqueAPI) [![Dependency Status](https://david-dm.org/g0v/CommuniqueAPI.svg?style=flat-square)](https://david-dm.org/g0v/CommuniqueAPI)
+[![Build Status][travis-image]]][travis-url] [![Dependency Status][david-dm-image]][david-dm-url]
 
 [G0V Communique API](http://g0v-communique-api.herokuapp.com/api/1.0/entry/all). Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
 
@@ -139,7 +139,7 @@ module.exports = {
 ```
 
 ### Environment
-[![devDependency Status](https://david-dm.org/g0v/CommuniqueAPI/dev-status.svg?style=flat-square)](https://david-dm.org/g0v/CommuniqueAPI#info=devDependencies)
+[![devDependency Status][david-dm-dev-image]][david-dm-dev-url]
 
 - Install [mongoDB](http://www.mongodb.org/)
 - Install [Node.js](http://nodejs.org/)
@@ -217,3 +217,13 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+[travis-image]: https://img.shields.io/travis/g0v/CommuniqueAPI.svg?style=flat-square
+[travis-url]: https://travis-ci.org/g0v/CommuniqueAPI
+
+[david-dm-image]: http://img.shields.io/david/g0v/CommuniqueAPI.svg?style=flat-square
+[david-dm-url]: https://david-dm.org/g0v/CommuniqueAPI
+
+[david-dm-dev-image]: http://img.shields.io/david/dev/g0v/CommuniqueAPI.svg?style=flat-square
+[david-dm-dev-url]: https://david-dm.org/g0v/CommuniqueAPI#info=devDependencies
