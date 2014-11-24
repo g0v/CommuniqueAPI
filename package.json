@@ -20,10 +20,10 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "express": "3.4.x",
-    "hackpad": "0.0.3",
-    "htmlparser2": "3.4.x",
-    "mongodb": "^1.0.x"
+    "express": "^4.10.x",
+    "hackpad": "^0.0.3",
+    "htmlparser2": "^3.4.x",
+    "mongodb": "^1.4.x"
   },
   "devDependencies": {
     "should": "^4.3.0",
