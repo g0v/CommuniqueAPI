@@ -1,6 +1,6 @@
 CommuniqueAPI
 =============
-[![Build Status](https://travis-ci.org/g0v/CommuniqueAPI.svg?branch=master)](https://travis-ci.org/g0v/CommuniqueAPI)
+[![Build Status](https://travis-ci.org/g0v/CommuniqueAPI.svg?branch=master)](https://travis-ci.org/g0v/CommuniqueAPI) [![Dependency Status](https://david-dm.org/g0v/CommuniqueAPI.svg?style=flat-square)](https://david-dm.org/g0v/CommuniqueAPI)
 
 [G0V Communique API](http://g0v-communique-api.herokuapp.com/api/1.0/entry/all). Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
 
@@ -139,6 +139,7 @@ module.exports = {
 ```
 
 ### Environment
+[![devDependency Status](https://david-dm.org/g0v/CommuniqueAPI/dev-status.svg?style=flat-square)](https://david-dm.org/g0v/CommuniqueAPI#info=devDependencies)
 
 - Install [mongoDB](http://www.mongodb.org/)
 - Install [Node.js](http://nodejs.org/)
