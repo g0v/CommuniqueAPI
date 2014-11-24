@@ -1,6 +1,6 @@
 CommuniqueAPI
 =============
-[![Build Status][travis-image]]][travis-url] [![Dependency Status][david-dm-image]][david-dm-url]
+[![Build Status][travis-image]][travis-url] [![Dependency Status][david-dm-image]][david-dm-url]
 
 [G0V Communique API](http://g0v-communique-api.herokuapp.com/api/1.0/entry/all). Parsing from [g0v hackpad](https://g0v.hackpad.com/ep/group/yZ9JT9UlJf4).
 
