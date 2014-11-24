@@ -30,7 +30,7 @@ describe('Communique Parser', function () {
         });
 
         communiqueParser.on('insertCommuniqueData', function (data, getItemID) {
-            data.should.have.keys(['date', 'padID', 'tags', 'content', 'comment', 'urls']);
+            data.should.have.keys(['date', 'padID', 'tags', 'content', 'content_en', 'comment', 'urls']);
             data.padID.should.be.equal('gliZZuXU5aW');
             getItemID.should.be.an.Function;
         });
