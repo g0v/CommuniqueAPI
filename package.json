@@ -1,7 +1,7 @@
 {
   "name": "CommuniqueAPI",
   "description": "The g0v Communique API",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "contributor": [
     {
       "name": "Lee",
@@ -23,7 +23,7 @@
     "express": "^4.10.x",
     "hackpad": "^0.0.3",
     "htmlparser2": "^3.4.x",
-    "mongodb": "^1.4.x"
+    "mongodb": "^2.0.0"
   },
   "devDependencies": {
     "should": "^4.3.0",
