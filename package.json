@@ -23,7 +23,8 @@
     "express": "^4.10.x",
     "hackpad": "^0.0.3",
     "htmlparser2": "^3.4.x",
-    "mongodb": "^2.0.0"  },
+    "mongodb": "^2.0.0"
+  },
   "devDependencies": {
     "should": "^4.3.0",
     "mocha": "^2.0.1"

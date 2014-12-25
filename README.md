@@ -154,6 +154,9 @@ And then open `localhost:5000/api/1.0/entry/all` to get the communiques.
 
 ## Change Log
 
+### 2014/12/25 v0.6.0
+- Use "mongodb": "^2.0.x"
+
 ### 2014/06/08 v0.5.1
 - Add test
 
